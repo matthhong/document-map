@@ -50,7 +50,7 @@
 		{ label: "dark", value: "g90" },
 	];
 
-	let theme = "g80"; // "white" | "g10" | "g80" | "g90" | "g100"
+	let theme = "white"; // "white" | "g10" | "g80" | "g90" | "g100"
 
 	$: document.documentElement.setAttribute("theme", theme);
 
@@ -74,7 +74,7 @@
 		window.location.href = "#/codes";
 	}
 
-	let modelUpdateDisabled;
+	let modelUpdateDisabled = true;
 
 	function run_model() {
 		modelUpdateDisabled = true;
@@ -92,7 +92,7 @@
 
 <Content>
 	<Grid fullWidth noGutter>
-		<Row>
+		<!-- <Row>
 			<Column lg={2}>
 				<RadioButtonGroup
 					legendText="Color theme"
@@ -112,7 +112,7 @@
 				>
 			</Column>
 			<Column lg={2}>
-				<Button on:click={model_refinement} kind="secondary" icon={ChartRelationship32}>Refine codes</Button>
+				<Button disabled on:click={model_refinement} kind="secondary" icon={ChartRelationship32}>Refine codes</Button>
 			</Column>
 			<Column lg={8}>
 				<div class="layering">
@@ -123,7 +123,7 @@
 			<Column lg={2}>
 				<Button disabled={modelUpdateDisabled} on:click={run_model} kind="ghost" icon={TextMiningApplier32}>Update clusters</Button>
 			</Column>
-		</Row>
+		</Row> -->
 		<Row>
 			<Column>
 				<div style="margin: var(--cds-layout-03) 0;">
@@ -139,6 +139,9 @@
 </Content>
 
 <style>
+	:root {
+		font-size: 16px;
+	}
 	.layering {
 		position: relative;
 		z-index: 10000;

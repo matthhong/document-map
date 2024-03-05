@@ -7,7 +7,7 @@ import string
 # import gspread
 import pandas as pd
 import spacy
-from model.modeling import run_multilayer
+# from model.modeling import run_multilayer
 
 def clean_string(content):
     cleaned = content.lower()

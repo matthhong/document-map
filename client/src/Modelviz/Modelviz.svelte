@@ -265,8 +265,8 @@
 					.attr("d", path_generator)
 					.attr("fill", "#DDDDDD")
 					.style("fill-opacity", 1)
-					// .attr("stroke", "#DDDDDD")
-					// .style("stroke-width", 1 / 2)
+					.attr("stroke", "#DDDDDD")
+					.style("stroke-width", 1 / 2)
 					.style("z-index", 1000)
 					.style('cursor', 'pointer')
 					.attr("id", (d, i) => {
@@ -440,7 +440,7 @@
 			</Row>
 			<Row>
 			<ProgressIndicator id="depth-layer" vertical currentIndex={$clusterLevel - 1}>
-				{#each Array(num_levels) as _, i}
+				{#each Array(num_levels - 1) as _, i}
 					<ProgressStep
 						label={i == num_levels ? "None" : "L" + (i + 1)}
 						description="The progress indicator will listen for clicks on the steps"
@@ -450,10 +450,10 @@
 			</ProgressIndicator>
 			</Row>
 			<div style="margin: var(--cds-layout-01) 0;" />
-			<Row>
+			<!-- <Row>
 				<label for="model-history" class:bx--label={true}>Model History</label>
-			</Row>
-			<Row>
+			</Row> -->
+			<!-- <Row>
 			<ProgressIndicator id="model-history" vertical currentIndex={$modelHistoryIndex}>
 				{#each Array(3) as _, i}
 					<ProgressStep
@@ -463,7 +463,7 @@
 					/>
 				{/each}
 			</ProgressIndicator>
-			</Row>
+			</Row> -->
 			<Row>
 				
 				<Column>
