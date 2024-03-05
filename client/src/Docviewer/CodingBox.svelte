@@ -261,8 +261,19 @@
 	</Row>
 	<div style="margin: var(--cds-layout-03) 0;" />
 	<Row>
-	<Button
+	<!-- <Button
 		disabled={highlightcodes.length > 0 || codeInput.length > 0 ? false : true}
+		on:click={(e) => {
+			e.target.disabled = true;
+			console.log('???');
+			
+			update_codes(codeInput);
+			savehighlight();
+			
+		}}
+	> -->
+	<Button
+		disabled
 		on:click={(e) => {
 			e.target.disabled = true;
 			console.log('???');

@@ -359,7 +359,7 @@
 
 <div id="viewport" in:fade={{ duration: 500 }}>
 	<Grid fullWidth padding>
-		{#if button_str != ""}
+		<!-- {#if button_str != ""}
 			<Row>
 				<div class="returnbutton">
 					<Button
@@ -372,7 +372,19 @@
 					</Button>
 				</div>
 			</Row>
-		{/if}
+		{/if} -->
+			<Row>
+				<div class="returnbutton">
+					<Button
+						size="small"
+						on:click={() => {
+							window.location.href = '#/';
+						}}
+					>
+						Return to Document Map
+					</Button>
+				</div>
+			</Row>
 		<Row>
 			<Column>
 				<Row id="text-header-row">
