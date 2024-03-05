@@ -141,6 +141,9 @@
 <style>
 	:root {
 		font-size: 16px;
+		@media (max-width: 1640px) {
+			font-size: 14px;
+		}
 	}
 	.layering {
 		position: relative;
