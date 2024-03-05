@@ -1,10 +1,6 @@
 from flask import Flask, send_from_directory, request
 import csv
 import json
-import random
-import os.path
-import string
-import pandas as pd
 import spacy
 
 def clean_string(content):

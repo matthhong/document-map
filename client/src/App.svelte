@@ -1,16 +1,11 @@
 <script>
 	import "carbon-components-svelte/css/all.css";
-	import TextMiningApplier32 from "carbon-icons-svelte/lib/TextMiningApplier32";
-	import ChartRelationship32 from "carbon-icons-svelte/lib/ChartRelationship32";
-	import Carbon32 from "carbon-icons-svelte/lib/Carbon32";
 
 	import { onMount, setContext } from "svelte";
 	import { Router } from "svelte-hash-router";
 
 	import Docviewer from "./Docviewer/Docviewer.svelte";
 	import Modelviz from "./Modelviz/Modelviz.svelte";
-	import ModelRefinement from "./ModelRefinement/ModelRefinement.svelte";
-	import DocCodeFilter from "./DocCodeFilter.svelte";
 
 	setContext('colorScheme', ["#66c2a5","#fc8d62","#8da0cb","#e78ac3","#a6d854","#ffd92f","#e5c494","#b3b3b3"])
 	import {
@@ -54,7 +49,7 @@
 
 	$: document.documentElement.setAttribute("theme", theme);
 
-	const views = [Docviewer, Modelviz, ModelRefinement];
+	const views = [Docviewer, Modelviz];
 
 	let currentView = 1;
 
