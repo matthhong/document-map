@@ -1,6 +1,10 @@
 <script>
 	import "carbon-components-svelte/css/all.css";
 
+	import { Header, HeaderAction, HeaderActionLink, HeaderUtilities, HeaderPanelLink, HeaderPanelDivider, HeaderPanelLinks, Modal } from "carbon-components-svelte";
+	import Information20 from "carbon-icons-svelte/lib/Information20/Information20.svelte";
+	import LogoGithub20 from "carbon-icons-svelte/lib/LogoGithub20/LogoGithub20.svelte";
+
 	import { onMount, setContext } from "svelte";
 	import { Router } from "svelte-hash-router";
 
@@ -81,11 +85,40 @@
 				}
 			});
 	}
+
+	let isSideNavOpen = false;
+	let isOpen = false;
 </script>
 
 <Theme bind:theme persist persistKey="__carbon-theme" />
 
+			<Header company="A Document Map of Blog Posts on" platformName="SimplyRecipes.com" bind:isSideNavOpen>
+				<HeaderUtilities>
+					<div on:click={() => (isOpen = true)} on:keydown>
+						<HeaderActionLink icon={Information20}/>
+					</div>
+					<HeaderActionLink icon={LogoGithub20} href={"https://github.com/matthhong/document-map"} target="_blank"/>
+				</HeaderUtilities>
+			</Header>
+
+			<Modal
+				modalHeading="About"
+				passiveModal
+				bind:open={isOpen}
+			>
+				<p>
+					This is a tool to help you navigate through a large collection of documents. It uses a machine learning model to group similar documents together and then allows you to explore the documents in each group.
+				</p>
+				<p>
+					You can also use this tool to refine the model by adding or removing codes from the documents.
+				</p>
+				<p>
+					For more information, please visit the...
+				</p>
+			</Modal>
+
 <Content>
+
 	<Grid fullWidth noGutter>
 		<!-- <Row>
 			<Column lg={2}>
