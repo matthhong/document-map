@@ -19,5 +19,5 @@ const createWritableStore = (key, startValue) => {
     };
   }
 
-export const clusterLevel = createWritableStore('clusterLevel', 0);
+export const clusterLevel = createWritableStore('clusterLevel', 1);
 export const visitedDocs = createWritableStore('visitedDocs', []);

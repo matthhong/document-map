@@ -396,6 +396,7 @@
 		[...Array(3)].every((v, i) => {
 
 			if (i >= $clusterLevel) {
+				console.log($clusterLevel);
 				vis.select(".boundary" + (i + 1))
 					.transition()
 					.style("opacity", 0)

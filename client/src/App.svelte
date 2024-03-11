@@ -102,19 +102,39 @@
 			</Header>
 
 			<Modal
-				modalHeading="About"
+				modalHeading=""
 				passiveModal
+				size="lg"
 				bind:open={isOpen}
 			>
-				<p>
-					This is a tool to help you navigate through a large collection of documents. It uses a machine learning model to group similar documents together and then allows you to explore the documents in each group.
+				<p class="info">
+					<strong>Scholastic</strong> is a tool for qualitative researchers to explore a collection of documents through interactive document clustering.
+					<br>
+					<br>
+
+					The central visual element of the <strong>Document Map</strong> view is a geographical treemap representing hiearchical document clusters as spatial 'regions.'
+					You can control the granularity of the hieararchical clusters with a step slider (top left).
+					<br>
+					<br>
+					Each document is represented with a hexagonal tile:
+					
+					<br>
+					- <em>Right-clicking</em> a hexagon expands a preview that shows the first 1,000 characters of the document.
+					<br>
+					- <em>Left-clicking</em> a hexagon opens the document in the <strong>Document Reader</strong>, where you can highlight and annotate the text.
+				
+					<br><br>
+
+					Our paper describing the prototype and its evaluation is available at the following link:
+					<a href="https://dl.acm.org/doi/pdf/10.1145/3526113.3545681" target="_blank">https://dl.acm.org/doi/pdf/10.1145/3526113.3545681</a>
+					
+					<br><br>
+					The paper was presented at ACM UIST 2022:
 				</p>
-				<p>
-					You can also use this tool to refine the model by adding or removing codes from the documents.
-				</p>
-				<p>
-					For more information, please visit the...
-				</p>
+
+				<iframe width="800" height="450" src="https://www.youtube.com/embed/w0tn9ySpVMw?si=6ToqfN5PoYXIAhUg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+				<br><br>
 			</Modal>
 
 <Content>
@@ -176,5 +196,13 @@
 	.layering {
 		position: relative;
 		z-index: 10000;
+	}
+	.info {
+		font-size: 1.25rem;
+	}
+	.iframe {
+		/* Center it in the parent component */
+		margin: 0 auto;
+		display: block;
 	}
 </style>
