@@ -112,16 +112,20 @@
 					<br>
 					<br>
 
-					The central visual element of the <strong>Document Map</strong> view is a geographical treemap representing hiearchical document clusters as spatial 'regions.'
-					You can control the granularity of the hieararchical clusters with a step slider (top left).
+					The <strong>Document Map</strong> view is a geographical treemap representing hiearchical document clusters as spatial 'regions':
+
+					<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;- You can control the granularity of the hieararchical clusters with the <em>step slider</em> (top left)
+					<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;- You can select some N documents with the <em>random sampler</em> (top right)
 					<br>
 					<br>
 					Each document is represented with a hexagonal tile:
 					
 					<br>
-					- <em>Right-clicking</em> a hexagon expands a preview that shows the first 1,000 characters of the document.
+					&nbsp;&nbsp;&nbsp;&nbsp;- <em>Right-clicking</em> a hexagon expands a preview that shows the first 1,000 characters of the document.
 					<br>
-					- <em>Left-clicking</em> a hexagon opens the document in the <strong>Document Reader</strong>, where you can highlight and annotate the text.
+					&nbsp;&nbsp;&nbsp;&nbsp;- <em>Left-clicking</em> a hexagon opens the document in the <strong>Document Reader</strong>, where you can highlight and annotate the text.
 				
 					<br><br>
 
